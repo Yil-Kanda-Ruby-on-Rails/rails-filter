@@ -1,0 +1,87 @@
+// Place all the styles related to the MarketPlaces controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+table{
+
+  border-collapse: collapse;
+  width: 100%;
+}
+
+input[type=submit]{
+  //background:url('https://www.flaticon.es/svg/static/icons/svg/1524/1524855.svg');
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+input[value='Products'] { 
+  background-image: url( 
+'https://www.flaticon.es/svg/static/icons/svg/1524/1524711.svg'); 
+  background-size: cover; 
+  background-color: transparent;
+  height: 100px; 
+  text-align: bottom;
+  font-weight: bold;
+  //text-indent: 100%;
+  //overflow: hidden;
+}
+input[value='Services'] { 
+  background-image: url( 
+'https://www.flaticon.es/svg/static/icons/svg/1514/1514552.svg'); 
+  background-size: cover; 
+  background-color: transparent;
+  height: 100px; 
+  text-align: bottom;
+  font-weight: bold;
+  //text-indent: 100%;
+  //overflow: hidden;
+} 
+input[value='Food'] { 
+  background-image: url( 
+'https://www.flaticon.es/svg/static/icons/svg/857/857755.svg'); 
+  background-size: cover; 
+  background-color: transparent;
+  height: 100px; 
+  text-align: bottom;
+  font-weight: bold;
+  //text-indent: 100%;
+  //overflow: hidden;
+} 
+
+input[value='All'] { 
+  background-image: url( 
+'https://www.flaticon.es/svg/static/icons/svg/684/684850.svg'); 
+  background-size: cover; 
+  background-color: transparent;
+  height: 100px; 
+  text-align: bottom;
+  font-weight: bold;
+  //text-indent: 100%;
+  //overflow: hidden;
+} 
+
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2;}
+
+tr:hover {background-color: #ddd;}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}

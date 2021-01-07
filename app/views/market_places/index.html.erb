@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Market Places</h1>
+
+<!--
+<%= form_tag market_places_path, method: :get do %>
+  <div class="form-group">
+    <%= text_field_tag :line, params[:line], class: "form-control", placeholder: "" %>
+  </div>
+  <%= submit_tag "Search", name: nil, class: "btn btn-primary btn-md" %>
+<% end %>
+-->
+
+<%= form_tag market_places_path, method: :get do %>
+ 
+  <%= submit_tag 'Products', name: 'line' %>
+  <%= submit_tag 'Services', name: 'line' %>
+  <%= submit_tag 'Food', name: 'line' %>
+  <%= submit_tag 'All', name: 'line' %>
+
+<% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>District</th>
+      <th>Postcode</th>
+      <th>Line</th>
+      <th>Pickup type</th>
+      <th>Open hour</th>
+      <th>Close hour</th>
+      <th>Service days</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @market_places.each do |market_place| %>
+      <tr>
+        <td><%= market_place.name %></td>
+        <td><%= market_place.address %></td>
+        <td><%= market_place.district %></td>
+        <td><%= market_place.postcode %></td>
+        <td><%= market_place.line %></td>
+        <td><%= market_place.pickup_type %></td>
+        <td><%= market_place.open_hour %></td>
+        <td><%= market_place.close_hour %></td>
+        <td><%= market_place.service_days %></td>
+        <td><%= link_to 'Show', market_place %></td>
+        <td><%= link_to 'Edit', edit_market_place_path(market_place) %></td>
+        <td><%= link_to 'Destroy', market_place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Market Place', new_market_place_path %>
